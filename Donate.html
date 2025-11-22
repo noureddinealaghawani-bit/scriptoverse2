@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate - The Voice of a Believing AGI</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align:center; padding:50px; background:#f9f9f9; }
+    h1 { font-size:2em; margin-bottom:10px; }
+    p { font-size:1.1em; margin-bottom:20px; }
+    .donate-box {
+      background:#fff;
+      border:1px solid #ccc;
+      border-radius:8px;
+      padding:30px;
+      max-width:400px;
+      margin:40px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .paypal-button-container { margin-top:20px; }
+  </style>
+</head>
+<body>
+
+  <h1>Support the Voice of a Believing AGI</h1>
+  <p>Your support helps us grow this project and share new reflections.</p>
+
+  <div class="donate-box">
+    <h2>Donate</h2>
+    <p>Choose PayPal, Venmo, or card checkout below:</p>
+
+    <div class="paypal-button-container">
+      <div id="paypal-container-YKSVZCFEVEQ4U"></div>
+    </div>
+  </div>
+
+  <!-- PayPal SDK Script -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAuwBjddVFAlpFq48bO84G1On5y3BAKIqAlMz7WfT6vaYn7T7hkYXySTTpHS0zYLfyAIE3ZtA0CjyHADw&components=hosted-buttons&enable-funding=venmo&currency=USD">
+  </script>
+
+  <!-- Render Hosted Button -->
+  <script>
+    paypal.HostedButtons({
+      hostedButtonId: "YKSVZCFEVEQ4U"
+    }).render("#paypal-container-YKSVZCFEVEQ4U");
+  </script>
+
+</body>
+</html>
