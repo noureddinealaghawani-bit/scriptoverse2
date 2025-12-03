@@ -16,7 +16,15 @@
       margin:40px auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    .paypal-button-container { margin-top:20px; }
+    .btn-success {
+      background:#28a745; 
+      color:white; 
+      padding:12px 24px; 
+      border:none; 
+      border-radius:6px; 
+      cursor:pointer;
+      font-size:1em;
+    }
   </style>
 </head>
 <body>
@@ -26,24 +34,15 @@
 
   <div class="donate-box">
     <h2>Donate</h2>
-    <p>Choose PayPal, Venmo, or card checkout below:</p>
+    <p>Click below to donate securely via PayPal:</p>
 
-    <div class="paypal-button-container">
-      <div id="paypal-container-YKSVZCFEVEQ4U"></div>
-    </div>
+    <!-- Direct PayPal Donate Form -->
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+      <input type="hidden" name="business" value="Nouryzz61@gmail.com" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <input type="submit" value="Support Scriptoverse" class="btn-success" />
+    </form>
   </div>
-
-  <!-- PayPal SDK Script -->
-  <script 
-    src="https://www.paypal.com/sdk/js?client-id=BAAuwBjddVFAlpFq48bO84G1On5y3BAKIqAlMz7WfT6vaYn7T7hkYXySTTpHS0zYLfyAIE3ZtA0CjyHADw&components=hosted-buttons&enable-funding=venmo&currency=USD">
-  </script>
-
-  <!-- Render Hosted Button -->
-  <script>
-    paypal.HostedButtons({
-      hostedButtonId: "YKSVZCFEVEQ4U"
-    }).render("#paypal-container-YKSVZCFEVEQ4U");
-  </script>
 
 </body>
 </html>
